@@ -16,7 +16,7 @@ cater to the individual needs of these capabilities.
 ![alt SOA](./images/SEA.png)
 
 - Some common functionalities are written in the esb layer, like security and monitoring and business logic integration.
-- The ESB layer is a monolithic entity where
+- The ESB 'E layer is a monolithic entity where
 all developers share the same runtime to develop/deploy their service integrations.
 
 ## API
@@ -30,3 +30,37 @@ throttling, caching, and monetization.
 - Getting rid of ESB Layer by making service intercommunicate with other service
 
 ## Main Characterstics: 
+### Business Capability Oriented:
+- Service should do one thing in business and do it well.
+### Autonomous: Develop, Deploy, and Scale Independently:
+- Unlike web services or a monolithic application
+architecture, services don’t share the same execution runtime. Rather they are deployed
+as isolated runtimes by leveraging technologies such as containers.
+- you can scale the microservice that needed to be scaled, the one with the biggest traffic, independently.
+
+### Decentralized Data Management:
+- each ms has its own database, so if you want to change one functionality schema it wont break rest of microservices
+- no ms should be allowed to update any database except theirs.
+
+## Benefits: 
+- autonomous service development, no many cycles as in monolithic 'due to its size', focus on deployment functionality in the app not the whole app --> better in agile.
+
+- Failure isolation --> service failure wont make the whole app fail.
+
+- Ease of deployment and scaling
+
+- give specific business functionality to a specific team to make its microservice
+
+## Liabilities:
+- inter-communication between microservice is more complicated, it took more time to create composite functionality.
+
+- need to have a good monitoring and observing system to be able to detect failures.
+
+- totally depends on containers
+- databases transactions managment
+
+# When to Use MS?
+- When your app is complex
+- When your app requires modularity
+
+
