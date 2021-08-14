@@ -27,7 +27,7 @@ which registers a callback function once the service responds back, and the clie
 synchronous communication style can be built on top of a non-blocking asynchronous implementation. but whatever it's client has to wait response.
 
 
-### Rest :
+## Rest :
  - is most famous synchronus communication and HTTP is the most famous used protocol.
 
 
@@ -58,5 +58,51 @@ should be supported.
 
 -----------------------------
 ## gRPC:
-- 
+- gRPC uses protocol buffers "TODO: check this later" , Google’s mature open source mechanism for serializing structured data.
+
+## A Glimpse of HTTP2:
+  
+### The main limitations of HTTP 1.1:
+- **Blocking**: handle one request at a time
+- **Overhead**: In HTTP 1.1, many headers are repeated
+across multiple requests. For example, headers such as User-Agent and Cookie are sent over and over, which is a waste of bandwidth. HTTP 1.1 defines the GZIP format to compress the payload, but that
+doesn’t apply to the headers.
+
+---------------------------
+Http2 is backward compatible. HTTP2 defines
+the concept of a stream, which is a bidirectional flow of bytes within an established connection, which may carry one or more messages.
+
+Frame is the smallest unit of
+communication in HTTP2, and each frame contains a frame header, this frame header at a minimum
+identifies the stream to which the frame belongs. A message is a complete sequence of
+frames that map to a logical HTTP message, such as a request or response, which consists
+of one or more frames.
+
+HTTP2 avoids header repetition and introduces header compression to optimize
+the use of bandwidth. It also introduces a new feature of sending server push messages
+without using the request-response style messages. 
+
+
+![alt SOA](./images/grpc_communication.png)
+
+---------------
+## Graphql:
+- GraphQL provides a query language for APIs and a runtime for fulfilling those queries with your existing data, gives clients the power to ask for exactly what they need and nothing more. The client has full control over the data it gets. The typical REST APIs require
+loading from multiple URLs, but GraphQL-based services get all the data your app needs
+in a single request.
+```
+{
+  hero {
+    name
+  }
+}
+
+{
+  "data": {
+    "hero": {
+      "name": "R2-D2"
+    }
+  }
+}
+```
 
