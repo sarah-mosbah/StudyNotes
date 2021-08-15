@@ -24,4 +24,26 @@ have to check 10 numbers at most. **log <sub> 2 </sub> (n)**
 ----------------------------------------------
 
 # Big O Notation:
-- 
+- Big O notation is special notation that tells you how fast an algorithm is. you need to know how
+the running time increases as the list size increases.
+
+- Big O notation lets you compare the number of operations you need to make not how many seconds it takes.
+
+- O --> big O, (n) --> number of operations.
+- Big O is about the worst case scenario: 
+```
+Simple Search: You want to find number 1 using simple search in sorted list, so it only takes one operation as one is the first element in array so it will be O(1) operation, but finding what you search isnot always first element * Happy Case * we design on the worst case scenario which means that you want to find index of number 1000000000000 in array of sorted elements of 1000000000000 so it will take O(1000000000000) to find this number 
+```
+![alt BigO](./images/bigo.png)
+
+## Travelling Sales Person:
+- Travelling Sales person is an example of O(n!) where the sales person wants to hit 5 cities in minimum amount of distance so he has to calculate 5! **120** possibility "*operation*" to find the minimum distance, if we make it 6 cities it will be 6! 720 possibility "*operation*" until you find the minimum distance.
+
+
+## Recap
+• Binary search is a lot faster than simple search.
+• O(log n) is faster than O(n), but it gets a lot faster once the list of
+items you’re searching through grows.
+• Algorithm speed isn’t measured in seconds.
+• Algorithm times are measured in terms of growth of an algorithm.
+• Algorithm times are written in Big O notation.
