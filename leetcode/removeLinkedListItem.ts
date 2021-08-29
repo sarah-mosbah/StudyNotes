@@ -46,3 +46,10 @@ function removeElementsAnotherApproach(head: ListNode | null, val: number): List
     }
     return head;
 };
+
+function removeElementsRecursive(head: ListNode | null, val: number): ListNode | null {
+    if (head == null) {return null; }
+    head.next = removeElementsRecursive(head.next, val);
+    return head.val == val ? head.next : head;
+}
+
