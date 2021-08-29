@@ -13,8 +13,6 @@ cater to the individual needs of these capabilities.
 ## service oriented architecture:
 - Segregating functionalities to small service indepentent of each other "loosely coupled architecture", interfaces no concern about implementation
 
-![alt SOA](./images/SEA.png)
-
 - Some common functionalities are written in the esb layer, like security and monitoring and business logic integration.
 - The ESB 'E layer is a monolithic entity where
 all developers share the same runtime to develop/deploy their service integrations.

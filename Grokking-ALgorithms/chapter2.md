@@ -18,7 +18,6 @@ random memory addresses are linked together. *linked list better than arrays in 
 
 - in accessing elements directly array is better, because in linked list you dont know the address of last element you have to iterate through them to find the address which stored inside the node before the last one, to reach last one.
 
-![alt array-list](./images/array-linkedlist.png)
 
 
 ## Deletion:

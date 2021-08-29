@@ -82,9 +82,6 @@ HTTP2 avoids header repetition and introduces header compression to optimize
 the use of bandwidth. It also introduces a new feature of sending server push messages
 without using the request-response style messages. 
 
-
-![alt SOA](./images/grpc_communication.png)
-
 ---------------
 ## Graphql:
 - GraphQL provides a query language for APIs and a runtime for fulfilling those queries with your existing data, gives clients the power to ask for exactly what they need and nothing more. The client has full control over the data it gets. The typical REST APIs require
