@@ -30,3 +30,5 @@ a hash function to intelligently figure out where to store elements.
 - Modeling relationships from one thing to another thing.
 - Filtering out duplicates
 - Caching/memorizing data instead of making your server do work
+
+
