@@ -47,3 +47,31 @@ enqueue and dequeue.
 
 - a directed graph, the relationship is only one way.
 - An undirected graph doesn’t have any arrows, and both nodes are each other’s neighbors.
+
+
+## Breadth First:
+- queue = [...graph[element]]; --> node with its neighbours
+- searched =[]
+- while(queue) ``Queue has elements``
+    neighbour=queue.dequeue();
+    if neigbour not in searched
+    if element ``Match Condition ``
+    return element 
+    else
+     queue = [...queue, graph[neighbour]]
+     searched.append(neighbour)
+
+### Running time
+- If you search your entire network for a mango seller, that means you’ll
+follow each edge. So the running time is at least O(number of
+edges).
+You also keep a queue of every person to search. Adding one person to
+the queue takes constant time: O(1). Doing this for every person will
+take O(number of people) total. Breadth-first search takes O(number of
+people + number of edges), and it’s more commonly written as O(V+E)
+(V for number of vertices, E for number of edges).
+
+-----------------------------
+
+**NB**: A tree is a special type of graph, where no edges
+ever point back
